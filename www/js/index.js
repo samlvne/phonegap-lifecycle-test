@@ -3,7 +3,7 @@ var resumed_count = 0;
 var launched_count = 0;
 
     function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false); // device ready event listener calls onDeviceReady function
 		console.log("device ready");
     }
 	
@@ -15,7 +15,7 @@ var launched_count = 0;
 
 
     // device APIs are available
-    //
+    // Alerts ready, listens for pause and resume events
     function onDeviceReady() {
 		alert("device ready");
         
@@ -27,7 +27,7 @@ var launched_count = 0;
     }
 
     // Handle the pause event
-    //
+    // Alerts the app is paused and icrements variable, uses the updateDisplay function to update the display
     function onPause() {
 		alert("pause");
 		paused_count++;
